@@ -1,0 +1,37 @@
+ ------ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  Line   Http/Livewire/PermissionEdit.php                                                                                                                                                       
+ ------ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  56     Call to an undefined method                                                                                                                                                            
+         Illuminate\Database\Eloquent\Builder|(Illuminate\Database\Eloquent\Collection&iterable<Illuminate\Database\Eloquent\Builder>)|Illuminate\Database\Eloquent\Model::detachPermission().  
+  66     Call to an undefined method                                                                                                                                                            
+         Illuminate\Database\Eloquent\Builder|(Illuminate\Database\Eloquent\Collection&iterable<Illuminate\Database\Eloquent\Builder>)|Illuminate\Database\Eloquent\Model::attachPermission().  
+ ------ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  Line   Http/Middleware/Authenticate.php                                                                                  
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+  17     Method App\Http\Middleware\Authenticate::redirectTo() should return string|null but return statement is missing.  
+ ------ ------------------------------------------------------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------------------------ 
+  Line   Providers/FortifyServiceProvider.php                              
+ ------ ------------------------------------------------------------------ 
+  40     Access to an undefined property Illuminate\Http\Request::$email.  
+ ------ ------------------------------------------------------------------ 
+
+ ------ ------------------------------------------------- 
+  Line   Providers/RouteServiceProvider.php               
+ ------ ------------------------------------------------- 
+  36     PHPDoc tag @var above a method has no effect.    
+  36     PHPDoc tag @var does not specify variable name.  
+ ------ ------------------------------------------------- 
+
+ -- -------------------------------------------------------------------------------------------------------------------------- 
+     Error                                                                                                                     
+ -- -------------------------------------------------------------------------------------------------------------------------- 
+     Ignored error pattern #Call to an undefined method [a-zA-Z0-9\\_\|]+::after\(\)\.# was not matched in reported errors.    
+     Ignored error pattern #Call to an undefined static method [a-zA-Z0-9\\_]+::send\(\)# was not matched in reported errors.  
+ -- -------------------------------------------------------------------------------------------------------------------------- 
+
+ [ERROR] Found 8 errors                                                                                                 
+
