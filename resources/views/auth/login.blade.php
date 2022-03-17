@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <img src="{{ asset('polo-logo-thumb.png') }}" class="img-fluid" style="width: 30%;"/>
         </x-slot>
 
         <div class="card-body">
