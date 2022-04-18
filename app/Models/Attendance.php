@@ -10,5 +10,5 @@ class Attendance extends Model
 {
     use HasFactory;
 
-    public $fillable = ['person_id', 'date_in', 'time_in', 'date_out', 'time_out', 'filename'];
+    public $fillable = ['person_id','person', 'base_date', 'time_in', 'time_out', 'filename'];
 }

@@ -16,10 +16,10 @@ class CreateAttendancesTable extends Migration
         Schema::create('attendances', function (Blueprint $table) {
             $table->id();
             $table->string('person_id');
+            $table->string('person');
             $table->time('filename')->nullable();
-            $table->date('date_in')->nullable();
+            $table->date('base_date')->nullable();
             $table->time('time_in')->nullable();
-            $table->date('date_out')->nullable();
             $table->time('time_out')->nullable();
             $table->timestamps();
         });
