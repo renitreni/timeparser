@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Exports\AttendanceExport;
 use App\Models\Attendance;
 use Carbon\Carbon;
 use Illuminate\Contracts\Container\BindingResolutionException;
@@ -14,6 +15,8 @@ use Illuminate\Validation\ValidationException;
 use InvalidArgumentException;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Maatwebsite\Excel\Facades\Excel;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Throwable;
 
 class Dashboard extends Component
@@ -102,7 +105,6 @@ class Dashboard extends Component
         return view('livewire.dashboard');
     }
 
-
     /**
      * @return void
      * @throws InvalidArgumentException
@@ -111,5 +113,13 @@ class Dashboard extends Component
     {
         Attendance::query()->delete();
         $this->emit('refreshDatatable');
+    }
+
+    /**
+     *
+     */
+    public function exportToExcel(): BinaryFileResponse
+    {
+        return Excel::download(new AttendanceExport, "Timesheet-".now().".xlsx");
     }
 }

@@ -25,6 +25,12 @@
                         Clear All Data
                     </button>
                 </div>
+                <div class="col-auto mb-3">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-success" wire:click="exportToExcel">
+                        Export To Excel
+                    </button>
+                </div>
                 <div class="col-12 mb-3">
                     <livewire:attendance />
                 </div>
